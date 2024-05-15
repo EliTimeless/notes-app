@@ -6,7 +6,7 @@ var year = updateYear.getFullYear();
 export default function Footer() {
   return (
     <footer>
-      <p>Copywright {year}</p>
+      <p>Copywright ©️ {year}</p>
     </footer>
   );
 }

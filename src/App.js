@@ -1,20 +1,31 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import Note from "./Notes";
+import Note from "./Note";
+import Notes from "./Notes";
 
-export default function App() {
+function App() {
   return (
     <div>
       <Header />
       <div>
-        <Note />
+        {Notes.map((paper) => {
+          return (
+            <Note
+              key={paper.key}
+              id={paper.key}
+              title={paper.title}
+              content={paper.content}
+            />
+          );
+        })}
       </div>
       <Footer />
     </div>
   );
 }
 
+export default App;
 //1. Create a new React app.
 //2. Create a App.jsx component.
 //3. Create a Header.jsx component that renders a <header> element
